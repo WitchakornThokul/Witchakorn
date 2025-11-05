@@ -1,27 +1,54 @@
 {
   "expo": {
-    "name": "myappo4",
-    "slug": "myappo4",
+    "name": "Smart Cow Tracker",
+    "slug": "smart-cow-tracker",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/cow-icon.jpg",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/cow-icon.jpg",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#F5DEB3"
     },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+        "foregroundImage": "./assets/cow-icon.jpg",
+        "backgroundColor": "#F5DEB3"
+      },
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "RECEIVE_BOOT_COMPLETED",
+        "WAKE_LOCK"
+      ],
+      "package": "com.smartcowtracker.app"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/cow-icon.jpg",
+      "bundler": "metro"
+    },
+    "platforms": ["ios", "android", "web"],
+    "sdkVersion": "49.0.0",
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "../assets/cow-icon.jpg",
+          "color": "#ffffff",
+          "sounds": ["./assets/notification.wav"]
+        }
+      ]
+    ],
+    "notification": {
+      "icon": "./assets/cow-icon.jpg",
+      "color": "#8B4513"
     }
   }
 }
